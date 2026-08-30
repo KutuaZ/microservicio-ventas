@@ -15,9 +15,9 @@ public class VentaController {
     public VentaController() {
         ventas.add(new Venta(1, "Alimento Perro 15kg", "Perro", "Raza Grande", 2, 25000, "2026-08-28"));
         ventas.add(new Venta(2, "Rascador Gato", "Gato", "Mestizo", 1, 30000, "2026-08-28"));
-        ventas.add(new Venta(3, "Juguete Hueso", "Perro", "Poodle", 3, 4000, "2026-08-15"));
+        ventas.add(new Venta(3, "Juguete Hueso", "Perro", "Poodle", 2, 5000, "2026-08-15"));
         ventas.add(new Venta(4, "Cama Mascotas", "Perro", "Mediana", 1, 40000, "2026-05-10"));
-        ventas.add(new Venta(5, "Acuario 20L", "Pez", "Betta", 1, 45000, "2025-12-10"));
+        ventas.add(new Venta(5, "Acuario 20L", "Pez", "Betta", 1, 60000, "2025-12-10"));
     }
 
     @GetMapping("/ventas")
