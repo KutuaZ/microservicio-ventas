@@ -1,29 +1,47 @@
 package cl.duoc.d.semana3d.model;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "venta")
+@JsonPropertyOrder({ "id", "producto", "tipoMascota", "raza", "cantidad", "precioUnitario", "fecha" })
 public class Venta {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "id")
+    private Long id;
+
+    @Column (name = "producto")
     private String producto;
+
+    @Column (name = "tipo_mascota")
     private String tipoMascota;
+
+    @Column (name = "raza")
     private String raza;
+
+    @Column (name = "cantidad")
     private int cantidad;
+
+    @Column (name = "precio_unitario")
     private double precioUnitario;
+
+    @Column (name = "fecha")
     private String fecha;
 
-    public Venta(int id, String producto, String tipoMascota, String raza, int cantidad, double precioUnitario, String fecha) {
-        this.id = id;
-        this.producto = producto;
-        this.tipoMascota = tipoMascota;
-        this.raza = raza;
-        this.cantidad = cantidad;
-        this.precioUnitario = precioUnitario;
-        this.fecha = fecha;
-    }
-
+    
     public double getTotal() {
         return cantidad * precioUnitario;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
