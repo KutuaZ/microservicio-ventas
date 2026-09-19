@@ -1,4 +1,4 @@
-package cl.duoc.d.semana3d;
+package cl.duoc.d.semana3d.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,9 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import cl.duoc.d.semana3d.model.ResumenGanancias;
+import cl.duoc.d.semana3d.model.Venta;
 
 @RestController
 public class VentaController {

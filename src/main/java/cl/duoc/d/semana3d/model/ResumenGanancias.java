@@ -1,4 +1,4 @@
-package cl.duoc.d.semana3d;
+package cl.duoc.d.semana3d.model;
 
 public class ResumenGanancias {
     private String periodo;
