@@ -68,4 +68,32 @@ public class Venta {
     public String getFecha() {
         return fecha;
     }
+
+    public void setProducto(String producto) {
+        this.producto = producto;
+    }
+
+    public void setTipoMascota(String tipoMascota) {
+        this.tipoMascota = tipoMascota;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public void setPrecioUnitario(double precioUnitario) {
+        this.precioUnitario = precioUnitario;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

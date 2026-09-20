@@ -11,5 +11,8 @@ public interface VentaService {
     List<Venta> getAllVentas();
     Optional<Venta> getVentaById(Long id);
     ResumenGanancias getGanancias(String periodo, String fecha);
+    Venta createVenta(Venta venta);
+    Venta updateVenta(Long id, Venta venta);
+    void deleteVenta(Long id);
 
 }

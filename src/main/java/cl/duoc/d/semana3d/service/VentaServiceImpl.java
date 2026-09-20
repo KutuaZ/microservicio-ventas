@@ -56,4 +56,25 @@ public class VentaServiceImpl implements VentaService {
 
         return new ResumenGanancias(periodo, suma);
     }
+
+    @Override
+    public Venta createVenta(Venta venta) {
+        return ventaRepository.save(venta);
+    }
+
+    @Override
+    public Venta updateVenta(Long id, Venta venta) {
+        return ventaRepository.findById(id).map(v -> {
+            v.setFecha(venta.getFecha());
+            v.setCantidad(venta.getCantidad());
+            v.setPrecioUnitario(venta.getPrecioUnitario());
+            return ventaRepository.save(v);
+        }).orElseThrow(() -> new RuntimeException("Venta no encontrada"));
+    }
+
+    @Override
+    public void deleteVenta(Long id) {
+        ventaRepository.deleteById(id);
+    }
+
 }
