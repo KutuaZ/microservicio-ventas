@@ -37,4 +37,6 @@ build/
 hs_err_pid*.log
 replay_pid*.log
 src/main/resources/application.properties
+/Wallet_Base_Aplicada/
+docker-compose.yml
 
